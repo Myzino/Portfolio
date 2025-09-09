@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { FaLocationArrow } from "react-icons/fa";
 import './App.css';
+import Image from './assets/images/buksucaps.jpg';
+import Image1 from './assets/images/cityvet.jpg';
+import Image2 from './assets/images/ebrangay.png';
 import avatar from './assets/jep.png';
 import avatar1 from './assets/jep2.png';
-import Velocity from "./components/ui/Velocity";
 import FlipWords from './components/ui/flip-word';
+import Velocity from "./components/ui/Velocity";
 
 
 interface HoverableImageProps {
@@ -44,29 +47,27 @@ function App() {
 
   const projects = [
     {
-      imgSrc: 'https://placehold.co/600x400/8B5CF6/FFFFFF?text=E-Commerce',
-      alt: 'E-Commerce Platform',
-      title: 'E-Commerce Platform',
-      desc: 'A fully responsive e-commerce site built with React and Node.js, featuring real-time inventory and secure payments.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      imgSrc: Image,
+      alt: 'Capstone Project',
+      title: 'BuksuLabSecure',
+      desc: ' A capstone project enhancing lab security and attendance at Bukidnon State University using IoT Based RFID access control and real-time tracking, with a web dashboard for attendance monitoring and managing access and generating reports. ',
+      tech: ['Laravel', 'MySQL',],
+    },
+    {
+      imgSrc: Image1,
+      alt: 'Malaybalay Vetirenary Clinic',
+      title: 'MCityVet',
+      desc: 'MCityVet is a project enhancing veterinary services and pet healthcare in Malaybalay City through an online platform for scheduling, medical records, and consultations, with a web dashboard for monitoring services, managing clinic operations, and generating reports.',
+      tech: ['React', 'Express', 'Nodejs', 'MongoDB'],
       github: '#',
       demo: '#'
     },
     {
-      imgSrc: 'https://placehold.co/600x400/10B981/FFFFFF?text=Analytics',
-      alt: 'Analytics Dashboard',
-      title: 'Analytics Dashboard',
-      desc: 'Interactive dashboard for data visualization using D3.js and Python, providing insights for business decisions.',
-      tech: ['D3.js', 'Python', 'PostgreSQL', 'Docker'],
-      github: '#',
-      demo: '#'
-    },
-    {
-      imgSrc: 'https://placehold.co/600x400/F59E0B/FFFFFF?text=Mobile+App',
-      alt: 'Fitness Mobile App',
-      title: 'Fitness Mobile App',
-      desc: 'Cross-platform fitness app developed with Flutter, integrating sensors for real-time health tracking.',
-      tech: ['Flutter', 'Firebase', 'REST API', 'SQLite'],
+      imgSrc: Image2,
+      alt: 'Barangay Project',
+      title: 'E-Barangay Management System',
+      desc: 'E-Barangay is a project designed for Barangay Sinayawan to streamline community services through a multi-tenancy system that generates official documents such as barangay indigency and barangay clearance, with a web dashboard for managing records, processing requests, and generating reports.',
+      tech: ['MySQL', 'Laravel'],
       github: '#',
       demo: '#'
     }
@@ -152,6 +153,7 @@ function App() {
                   </span>
                 ))}
               </div>
+
             </div>
 
             {/* Action Buttons */}
@@ -163,16 +165,14 @@ function App() {
                 </svg>
               </button>
             </div> 
+            
           </div>
 
           {/* Navigation Arrows */}
-         
         </div>
 
         {/* Right Side - Carousel */}
-        <div className="lg:w-1/2">
-          {/* Image Carousel */}
-          <div className="relative">
+            <div className="lg:w-1/2">
             <div className="overflow-hidden rounded-xl shadow-lg">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -193,10 +193,7 @@ function App() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Circle Indicators */}
-         <div className="flex justify-center p-3 gap-4">
+              <div className="flex justify-center p-3 gap-4">
             <button 
               onClick={prevProject}
               className="bg-gray-200 hover:bg-gray-300 p-3 rounded-full transition-colors"
@@ -216,7 +213,7 @@ function App() {
               </svg>
             </button>
           </div>
-        </div>
+          </div>
       </div>
     </div>
 

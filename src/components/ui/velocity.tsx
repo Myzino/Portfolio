@@ -76,7 +76,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 function Velocity() {
   return (
     <section>
-      <ParallaxText baseVelocity={-1}>React Nextjs</ParallaxText>
+      <ParallaxText baseVelocity={-1} >React Nextjs</ParallaxText>
       <ParallaxText baseVelocity={1}>Nodejs Laravel</ParallaxText>
     </section>
   );
