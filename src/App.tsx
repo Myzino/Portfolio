@@ -7,7 +7,7 @@ import Image2 from './assets/images/ebrangay.png';
 import avatar from './assets/jep.png';
 import avatar1 from './assets/jep2.png';
 import FlipWords from './components/ui/flip-word';
-import Velocity from "./components/ui/Velocity";
+import Velocity from "./components/ui/velocity";
 
 
 interface HoverableImageProps {
