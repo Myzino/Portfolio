@@ -6,6 +6,7 @@ import Image1 from './assets/images/cityvet.jpg';
 import Image2 from './assets/images/ebrangay.png';
 import avatar from './assets/jep.png';
 import avatar1 from './assets/jep2.png';
+import Counters from './components/ui/counterapi';
 import FlipWords from './components/ui/flip-word';
 import Velocity from "./components/ui/velocity";
 
@@ -106,6 +107,7 @@ function App() {
     <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Jeffrey Sedoro</h1>
      <h2 className='flex text-xs md:text-xs text-black mb-2'><FaLocationArrow className=''/> <p className='text-black md:ml-2'>Valencia City, Bukidnon 8709</p></h2>
     <h2 className="text-lg md:text-xl text-gray-600 mb-2"><FlipWords words = {words}/></h2>
+    <h1><Counters /></h1>
     <p className="text-gray-700 mb-6 leading-relaxed">
       Passionate about creating innovative web solutions and user-centric designs. With a deep knowledge and experience in modern technologies, I specialize in building scalable applications and elegant interfaces.
     </p>
