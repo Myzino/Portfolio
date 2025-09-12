@@ -194,10 +194,10 @@ function App() {
             borderColor: skill.borderColor
           }}
           onMouseEnter={(e) => {
-            e.target.style.backgroundColor = skill.hoverBackgroundColor;
+            (e.currentTarget as HTMLDivElement).style.backgroundColor = skill.hoverBackgroundColor;
           }}
           onMouseLeave={(e) => {
-            e.target.style.backgroundColor = skill.backgroundColor;
+            (e.currentTarget as HTMLDivElement).style.backgroundColor = skill.backgroundColor;
           }}
         >
           {skill.name}
