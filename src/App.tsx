@@ -88,6 +88,74 @@ function App() {
     "Tech Enthusiast",
     "Problem Solver",
   ]
+ const skillsWithColors = [
+    {
+      name: 'JavaScript/TypeScript',
+      backgroundColor: 'hsl(0, 45%, 88%)',
+      color: 'hsl(0, 65%, 25%)',
+      borderColor: 'hsl(0, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(0, 55%, 82%)',
+      href: 'https://docs.nestjs.com/'
+    },
+    {
+      name: 'React',
+      backgroundColor: 'hsl(45, 45%, 88%)',
+      color: 'hsl(45, 65%, 25%)',
+      borderColor: 'hsl(45, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(45, 55%, 82%)',
+      href: 'https://react.dev/learn'
+    },
+    {
+      name: 'Node.js',
+      backgroundColor: 'hsl(90, 45%, 88%)',
+      color: 'hsl(90, 65%, 25%)',
+      borderColor: 'hsl(90, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(90, 55%, 82%)',
+      href: 'https://nodejs.org/en/learn/getting-started/introduction-to-nodejs'
+    },
+    {
+      name: 'Next.js',
+      backgroundColor: 'hsl(135, 45%, 88%)',
+      color: 'hsl(135, 65%, 25%)',
+      borderColor: 'hsl(135, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(135, 55%, 82%)',
+      href: 'https://nextjs.org/docs'
+    },
+    {
+      name: 'Python',
+      backgroundColor: 'hsl(180, 45%, 88%)',
+      color: 'hsl(180, 65%, 25%)',
+      borderColor: 'hsl(180, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(180, 55%, 82%)',
+      href: 'https://www.python.org/doc/'
+    },
+    {
+      name: 'Laravel',
+      backgroundColor: 'hsl(225, 45%, 88%)',
+      color: 'hsl(225, 65%, 25%)',
+      borderColor: 'hsl(225, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(225, 55%, 82%)',
+      href: 'https://laravel.com/docs/12.x'
+    },
+    {
+      name: 'UI/UX',
+      backgroundColor: 'hsl(270, 45%, 88%)',
+      color: 'hsl(270, 65%, 25%)',
+      borderColor: 'hsl(270, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(270, 55%, 82%)',
+      href: 'https://www.figma.com/files/team/1427613433698480193/user/1134098738009952033?fuid=1134098738009952033'
+    },
+    {
+      name: 'NestJs',
+      backgroundColor: 'hsl(315, 45%, 88%)',
+      color: 'hsl(315, 65%, 25%)',
+      borderColor: 'hsl(315, 45%, 70%)',
+      hoverBackgroundColor: 'hsl(315, 55%, 82%)',
+      href: 'https://docs.nestjs.com/'
+    }
+  ];
+
+
 
   return (
     
@@ -114,14 +182,28 @@ function App() {
     
     {/* Fixed Skills Section */}
     <div className="flex flex-wrap justify-center md:justify-start gap-3">
-      {['JavaScript/TypeScript', 'React', 'Node.js','Next.js', 'Python', 'Laravel', 'UI/UX'].map((skill) => (
+       <div className="flex flex-wrap justify-center md:justify-start gap-3">
+      {skillsWithColors.map((skill) => (
         <div
-          key={skill}
-          className="bg-blue-100 px-4 py-2 rounded-lg font-semibold text-blue-800 border border-blue-300 hover:bg-blue-200 hover:transform hover:-translate-y-1 transition-all duration-200 text-sm md:text-base whitespace-nowrap"
+        onClick={() => window.open(skill.href, '_blank')}
+          key={skill.name}
+          className="px-4 py-2 rounded-lg font-semibold border hover:transform hover:-translate-y-1 transition-all duration-200 text-sm md:text-base whitespace-nowrap"
+          style={{
+            backgroundColor: skill.backgroundColor,
+            color: skill.color,
+            borderColor: skill.borderColor
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = skill.hoverBackgroundColor;
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = skill.backgroundColor;
+          }}
         >
-          {skill}
+          {skill.name}
         </div>
       ))}
+    </div>
     </div>
   </div>
 </div>
